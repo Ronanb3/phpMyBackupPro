@@ -198,7 +198,7 @@ print_r($resultArray);
 
                             // print query results
                             $result_exists = false;
-                            while ($result = @mysqli_fetch_array($res, MYSQL_NUM)) {
+                            while ($result = @mysqli_fetch_array($res, MYSQLI_NUM)) {
                                 $result_exists = true;
                                 if (!$key) {
                                     echo "<tr " . PMBP_change_color("#FFFFFF", "#000000") . ">";
