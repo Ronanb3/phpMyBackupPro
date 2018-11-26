@@ -2158,3 +2158,10 @@ function PMBP_shutdown_handler($buffer)
     }
     return $buffer;
 }
+
+// RBO : Added mysqli_field_name since it doesn't exist !
+function mysqli_field_name($result, $field_offset)
+{
+        $properties = mysqli_fetch_field_direct($result, $field_offset);
+        return is_object($properties) ? $properties->name : false;
+}
